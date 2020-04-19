@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<title>Animated Login and Signup </title>
+	<link rel="stylesheet" href="/stylesheets/loginform.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			$(".login-form").hide();
+			$(".login").css("background", "none");
+			$(".login").click(function(){
+  			$(".signup-form").hide();
+  			$(".login-form").show();
+  			$(".signup").css("background", "none");
+  			$(".login").css("background", "#fff");
+		});
+
+			$(".signup").click(function(){
+  			$(".signup-form").show();
+  			$(".login-form").hide();
+  			$(".login").css("background", "none");
+  			$(".signup").css("background", "#fff");
+		});
+
+		$(".btn").click(function(){
+  			$(".input").val("");
+		});
+	});
+
+
+	
+	</script>
+</head>
+<body>
+	<!--
+
+  <div class="wrapper" role="dialog" id="myModal" >
+    <div class="container">
+      
+      <div class="signup">Sign Up</div>
+      <div class="login">Log In</div>
+      
+       <div class="signup-form">
+		
+		<form  method="post" role="form">
+		<form method="get" action="/signup" >
+          <input type="text" name="mail" placeholder="Your Email Address" class="input" ><br />
+          <input type="text" name="user" placeholder="Choose a Username" class="input"  ><br />
+          <input type="password" name="pass"  placeholder="Choose a Password" class="input" ><br />
+         <div class="btn"  >Create account</a></div>
+		<div> <button type="submit" class="btn">Create Account </div> 
+			</form>
+		
+       </div>
+      
+      <div class="login-form">
+	<form method="post" action="/welcome">
+
+          <input type="text" placeholder="Email or Username" class="input"><br />
+          <input type="password" placeholder="Password" class="input"><br />
+		<div><button type="submit" class="btn">Login</div>
+	</form>
+          <span><a href="#">I forgot my username or password.</a></span>
+       </div>
+      
+    </div>
+  </div>
+-->
+			<form method="get" action="/signup" >
+          <input type="text" name="mail" placeholder="Your Email Address" class="input" ><br />
+          <input type="text" name="user" placeholder="Choose a Username" class="input"  ><br />
+          <input type="password" name="pass"  placeholder="Choose a Password" class="input" ><br />
+          	<div> <button type="submit" class="btn">Create Account </div> 
+			</form>
+		
+
+
+
+
+
+</body>
+</html>
